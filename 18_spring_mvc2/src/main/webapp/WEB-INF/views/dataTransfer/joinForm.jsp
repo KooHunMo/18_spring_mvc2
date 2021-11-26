@@ -23,8 +23,7 @@
 		    	<p>이미 회원가입이 되어있으면 <a href="vTOc/transfer5?isMember=yes&isSession=no">로그인으로 이동하기</a></p>
 		    -->
 	    	<p>이미 회원가입이 되어있으면 <a href="vTOc/transfer5/yes/no">로그인으로 이동하기</a></p>
-		</fieldset>				<!-- 맨 앞에 /가 있으면 상대경로, 맨 앞에 /가 없으면 절대경로이다 풀어말하면 
-								/가 있으면 /앞의 url까지 화면에 안나오고 /가 없으면 /앞의 url이 나온다-->
+		</fieldset>	
      </form>
 </body>
 </html>
