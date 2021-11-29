@@ -1,5 +1,4 @@
 package com.spring.mvc2.dataTransfer.domain;
-
 import java.util.Date;
 
 import org.springframework.stereotype.Component;

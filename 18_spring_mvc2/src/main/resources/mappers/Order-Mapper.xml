@@ -173,6 +173,50 @@
 				O.PRODUCT_CODE = P.PRODUCT_CODE
 	</select>
 
+	<!-- 		
+		
+	  	# Dao에서 mapper로 파라메타 전달 
+	  	
+		- 전달 받은 데이터를 쿼리문에서 ${변수}  , #{변수}과 같은 형태로 사용된다.
+		- 주로 #{값} 형태(preparedStatement)를 사용하며 이 형태를 권장한다.
+		- 대소문자가 구분되므로 오타에 주의한다.
+		
+	-->
+	<insert id="insertSingleData" parameterType="String">
+		INSERT INTO
+				T_ORDER_LIST(MEMBER_ID)
+		VALUES (
+				#{memberId}
+		)
+	</insert>
+
+	<insert id="insertDto" parameterType="OrderDto">
+		INSERT INTO T_ORDER_LIST (
+				MEMBER_ID,
+				PRODUCT_CODE,
+				PRODUCT_NAME
+		)
+		VALUES (
+				#{memberId},
+				#{productCode},
+				#{productName}
+		)
+	</insert>
+	
+	<insert id="insertMap" parameterType="map">
+		INSERT INTO T_ORDER_LIST (
+				MEMBER_ID,
+				PRODUCT_CODE,
+				PRODUCT_NAME
+		)
+		VALUES (
+				#{memberId},
+				#{productCode},
+				#{productName}
+		)
+	</insert>
+
+
 </mapper>
  
  
